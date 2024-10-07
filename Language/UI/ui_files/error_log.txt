@@ -1,0 +1,743 @@
+
+Timestamp: 2024-01-14 17:17:44.101031
+QProcess Exception:
+Server sent a very old message with ID 7324079594223665153, ignoring (see FAQ for details)
+Server closed the connection: [WinError 10053] An established connection was aborted by the software in your host machine
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-01-14 18:13:40.431230
+QProcess Exception:
+Server sent a very old message with ID 7324082968993532929, ignoring (see FAQ for details)
+Server closed the connection: [WinError 10053] An established connection was aborted by the software in your host machine
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-01-14 18:13:40.536028
+QProcess Exception:
+Server resent the older message 7324096146902044673, ignoring
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-01-14 18:37:03.735829
+QProcess Exception:
+Server closed the connection: 0 bytes read on a total of 8 expected bytes
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-01-14 18:37:03.797165
+QProcess Exception:
+Security error while unpacking a received message: Server replied with a wrong session ID (see FAQ for details)
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-01-17 22:10:31.133266
+Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\NLPapp\gui\dataframe_viewer.py", line 277, in save_changes
+    self.reset_clicked()
+AttributeError: 'DataframeViewer' object has no attribute 'reset_clicked'
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-04 21:26:27.299285
+Threadpool Exception:
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/utils.py", line 116, in run
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/tcbravo/SMNLP/nlp/plot_models.py", line 438, in model_pipeline
+    self.update_progress()
+  File "/home/tcbravo/SMNLP/nlp/plot_models.py", line 272, in update_progress
+    self.signals.progress.emit(int(percent))
+RuntimeError: Internal C++ object (Signals) already deleted.
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-04 21:26:27.300071
+Uncaught Exception:
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/utils.py", line 116, in run
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/tcbravo/SMNLP/nlp/plot_models.py", line 438, in model_pipeline
+    self.update_progress()
+  File "/home/tcbravo/SMNLP/nlp/plot_models.py", line 272, in update_progress
+    self.signals.progress.emit(int(percent))
+RuntimeError: Internal C++ object (Signals) already deleted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/utils.py", line 124, in run
+    self.signals.exception.emit()
+RuntimeError: Internal C++ object (Signals) already deleted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/utils.py", line 126, in run
+    self.signals.finished.emit()
+RuntimeError: Internal C++ object (Signals) already deleted.
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-11 22:49:56.724101
+Threadpool Exception:
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/utils.py", line 116, in run
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/tcbravo/SMNLP/nlp/plot_models_gpu.py", line 524, in model_pipeline
+    doc_plot_df = self.doc_plot_pipeline(message_df, doc2vec_array, doc_assigned_topics)
+  File "/home/tcbravo/SMNLP/nlp/plot_models_gpu.py", line 363, in doc_plot_pipeline
+    doc2vec_3d_vectors = dimension_reduction(doc2vec_array, dr=self.dr)
+  File "/home/tcbravo/SMNLP/nlp/plot_models_gpu.py", line 255, in dimension_reduction
+    dr_array = TSNE(perplexity=25, n_components=3, init='pca', n_iter=500).fit_transform(vector_array)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/cuml/internals/api_decorators.py", line 344, in inner_f
+    return func(**kwargs)
+  File "t_sne.pyx", line 300, in cuml.manifold.t_sne.TSNE.__init__
+ValueError: Currently TSNE supports n_components = 2; but got n_components = 3
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-11 22:58:26.793686
+Threadpool Exception:
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/utils.py", line 116, in run
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/tcbravo/SMNLP/nlp/plot_models_gpu.py", line 524, in model_pipeline
+    doc_plot_df = self.doc_plot_pipeline(message_df, doc2vec_array, doc_assigned_topics)
+  File "/home/tcbravo/SMNLP/nlp/plot_models_gpu.py", line 363, in doc_plot_pipeline
+    doc2vec_3d_vectors = dimension_reduction(doc2vec_array, dr=self.dr)
+  File "/home/tcbravo/SMNLP/nlp/plot_models_gpu.py", line 255, in dimension_reduction
+    dr_array = TSNE(perplexity=25, n_components=3, init='pca', n_iter=500).fit_transform(vector_array)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/manifold/_t_sne.py", line 1111, in fit_transform
+    embedding = self._fit(X)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/manifold/_t_sne.py", line 841, in _fit
+    X = self._validate_data(
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/base.py", line 604, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 917, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/sklearn/utils/_array_api.py", line 380, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "cupy/_core/core.pyx", line 1475, in cupy._core.core._ndarray_base.__array__
+TypeError: Implicit conversion to a NumPy array is not allowed. Please use `.get()` to construct a NumPy array explicitly.
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-12 12:39:20.886515
+Uncaught Exception:
+Traceback (most recent call last):
+  File "/home/tcbravo/SMNLP/gui/dashboard_doctab.py", line 1126, in docTable_rowSelection
+    self.starMarker.set_data(xyz_array, edge_width=2, face_color=(0.9, 1, 0.1, 1),
+  File "/home/tcbravo/miniconda3/envs/nlpenv/lib/python3.10/site-packages/vispy/visuals/markers.py", line 649, in set_data
+    data['a_size'] = size
+ValueError: could not broadcast input array from shape (666,) into shape (1,)
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-13 10:19:59.365144
+QProcess Exception:
+Telegram is having internal issues RpcCallFailError: Telegram is having internal issues, please try again later. (caused by GetRepliesRequest)
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-13 10:21:30.804221
+QProcess Exception:
+Telegram is having internal issues RpcCallFailError: Telegram is having internal issues, please try again later. (caused by GetRepliesRequest)
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-16 16:10:19.682233
+Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\main_window.py", line 405, in show_dashboard_window
+    self.dashboard.reload_data()
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard.py", line 113, in reload_data
+    self.load_data()
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard.py", line 162, in load_data
+    self.sumTab.load_data(sum_path, freq_path, topic_path)
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_sumtab.py", line 176, in load_data
+    self.update_widgets()
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_sumtab.py", line 303, in update_widgets
+    self.filter_data(date_query, source_query)
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_sumtab.py", line 372, in filter_data
+    self.freqGraph.update_graph(date_query, source_query)
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_graphs.py", line 572, in update_graph
+    self.update_rareWords(source_query)
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_graphs.py", line 648, in update_rareWords
+    mask = (rare_df[self.dates] <= 1).all(axis=1)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\frame.py", line 4096, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\indexes\base.py", line 6199, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\indexes\base.py", line 6248, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['2024-01-29', '2024-01-30', '2024-01-31', '2024-02-01', '2024-02-02',\n       '2024-02-03', '2024-02-04'],\n      dtype='object')] are in the [columns]"
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-17 14:57:55.712876
+Uncaught Exception:
+Traceback (most recent call last):
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 153, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 182, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Word'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_doctab.py", line 744, in similarity_search
+    self.doc_df['Similarity'] = self.doc_df['Word'].map(sim_dict)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\indexes\base.py", line 3809, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Word'
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-02-17 14:59:15.189405
+Uncaught Exception:
+Traceback (most recent call last):
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 153, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 182, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Word'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dashboard_doctab.py", line 744, in similarity_search
+    self.doc_df['Similarity'] = self.doc_df['Word'].map(sim_dict)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\pandas\core\indexes\base.py", line 3809, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Word'
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-01 13:33:17.238763
+QProcess Exception:
+Server closed the connection: 0 bytes read on a total of 8 expected bytes
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-01 13:33:17.314812
+QProcess Exception:
+Security error while unpacking a received message: Server replied with a wrong session ID (see FAQ for details)
+Server resent the older message 7341464892086047745, ignoring
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-01 19:56:29.851750
+QProcess Exception:
+Telegram is having internal issues RpcCallFailError: Telegram is having internal issues, please try again later. (caused by GetRepliesRequest)
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-08 18:27:47.102413
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 320, in <module>
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-08 18:27:47.162411
+QProcess Exception:
+    prawClient.start_client()
+  File "C:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 77, in start_client
+    self.main()
+  File "C:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 116, in main
+    main_menu = self.select_subreddit(subreddit_list)
+  File "C:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 176, in select_subreddit
+    self.download_comments(subreddit, offset_timestamp) # Pass the subreddit and offset timestamp
+  File "C:\Users\tcbil\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 258, in download_comments
+    submission.comments.replace_more(limit=100)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\models\comment_forest.py", line 183, in replace_more
+    new_comments = item.comments(update=False)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\models\reddit\more.py", line 76, in comments
+    self._comments = self._reddit.post(API_PATH["morechildren"], data=data)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\reddit.py", line 842, in post
+    return self._objectify_request(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\reddit.py", line 517, in _objectify_request
+    self.request(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\praw\reddit.py", line 941, in request
+    return self._core.request(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 328, in request
+    return self._request_with_retries(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 254, in _request_with_retries
+    return self._do_retry(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 162, in _do_retry
+    return self._request_with_retries(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 254, in _request_with_retries
+    return self._do_retry(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 162, in _do_retry
+    return self._request_with_retries(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 234, in _request_with_retries
+    response, saved_exception = self._make_request(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\sessions.py", line 186, in _make_request
+    response = self._rate_limiter.call(
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\rate_limit.py", line 47, in call
+    response = request_function(*args, **kwargs)
+  File "C:\Users\tcbil\miniconda3\envs\nlpenv\lib\site-packages\prawcore\requestor.py", line 70, in request
+    raise RequestException(exc, args, kwargs) from None
+prawcore.exceptions.RequestException: error with request HTTPSConnectionPool(host='oauth.reddit.com', port=443): Max retries exceeded with url: /api/morechildren/?raw_json=1 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-19 13:34:08.532743
+QProcess Exception:
+Server sent a very old message with ID 7348118681062798337, ignoring (see FAQ for details)
+Server closed the connection: [WinError 10053] An established connection was aborted by the software in your host machine
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-03-19 13:34:08.641744
+QProcess Exception:
+Server resent the older message 7348129181776145409, ignoring
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-04-25 12:44:22.960488
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 320, in <module>
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-04-25 12:44:22.989440
+QProcess Exception:
+    prawClient.start_client()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 77, in start_client
+    self.main()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 116, in main
+    main_menu = self.select_subreddit(subreddit_list)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 176, in select_subreddit
+    self.download_comments(subreddit, offset_timestamp) # Pass the subreddit and offset timestamp
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 258, in download_comments
+    submission.comments.replace_more(limit=100)
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\comment_forest.py", line 183, in replace_more
+    new_comments = item.comments(update=False)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\reddit\more.py", line 76, in comments
+    self._comments = self._reddit.post(API_PATH["morechildren"], data=data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 842, in post
+    return self._objectify_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 517, in _objectify_request
+    self.request(
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 941, in request
+    return self._core.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 328, in request
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 254, in _request_with_retries
+    return self._do_retry(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 162, in _do_retry
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 254, in _request_with_retries
+    return self._do_retry(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 162, in _do_retry
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 267, in _request_with_retries
+    raise self.STATUS_EXCEPTIONS[response.status_code](response)
+prawcore.exceptions.ServerError: received 500 HTTP response
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-04-25 13:06:55.978194
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 320, in <module>
+    prawClient.start_client()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 77, in start_client
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-04-25 13:06:56.002460
+QProcess Exception:
+    self.main()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 115, in main
+    subreddit_list = list(subreddit_list)  # Convert ListingGenerator to a list
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\listing\generator.py", line 63, in __next__
+    self._next_batch()
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\listing\generator.py", line 89, in _next_batch
+    self._listing = self._reddit.get(self.url, params=self.params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 712, in get
+    return self._objectify_request(method="GET", params=params, path=path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 517, in _objectify_request
+    self.request(
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 941, in request
+    return self._core.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 328, in request
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 234, in _request_with_retries
+    response, saved_exception = self._make_request(
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 186, in _make_request
+    response = self._rate_limiter.call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\rate_limit.py", line 46, in call
+    kwargs["headers"] = set_header_callback()
+                        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 282, in _set_header_callback
+    self._authorizer.refresh()
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\auth.py", line 425, in refresh
+    self._request_token(
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\auth.py", line 155, in _request_token
+    response = self._authenticator._post(url=url, **data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\auth.py", line 59, in _post
+    raise ResponseException(response)
+prawcore.exceptions.ResponseException: received 500 HTTP response
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-03 08:28:59.255524
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 320, in <module>
+    prawClient.start_client()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 77, in start_client
+    self.main()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 116, in main
+    main_menu = self.select_subreddit(subreddit_list)
+                ^^^^^^^^^^^^^^^^^^^^^^-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-03 08:28:59.287378
+QProcess Exception:
+^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 176, in select_subreddit
+    self.download_comments(subreddit, offset_timestamp) # Pass the subreddit and offset timestamp
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 258, in download_comments
+    submission.comments.replace_more(limit=100)
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\comment_forest.py", line 183, in replace_more
+    new_comments = item.comments(update=False)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\reddit\more.py", line 76, in comments
+    self._comments = self._reddit.post(API_PATH["morechildren"], data=data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 842, in post
+    return self._objectify_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 517, in _objectify_request
+    self.request(
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\reddit.py", line 941, in request
+    return self._core.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 328, in request
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 254, in _request_with_retries
+    return self._do_retry(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 162, in _do_retry
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 254, in _request_with_retries
+    return self._do_retry(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 162, in _do_retry
+    return self._request_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 234, in _request_with_retries
+    response, saved_exception = self._make_request(
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\sessions.py", line 186, in _make_request
+    response = self._rate_limiter.call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\rate_limit.py", line 47, in call
+    response = request_function(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\prawcore\requestor.py", line 70, in request
+    raise RequestException(exc, args, kwargs) from None
+prawcore.exceptions.RequestException: error with request HTTPSConnectionPool(host='oauth.reddit.com', port=443): Max retries exceeded with url: /api/morechildren/?raw_json=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002168BDF6350>: Failed to establish a new connection: [Errno 11002] getaddrinfo failed'))
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-03 19:26:30.932372
+QProcess Exception:
+Server sent a very old message with ID 7376420923057840137, ignoring (see FAQ for details)
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-20 20:25:32.156530
+Threadpool Exception:
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\multiprocessing\pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\preprocess_multi.py", line 386, in map_preprocess
+    doc = word_mapper(doc)
+          ^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\mapping.py", line 300, in word_mapper
+    result = re.sub(pattern, lambda match: WORD_MAP[match.group(0).lower()], text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 185, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\mapping.py", line 300, in <lambda>
+    result = re.sub(pattern, lambda match: WORD_MAP[match.group(0).lower()], text)
+                                           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'supreme court of the united states'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\utils.py", line 140, in run
+    result = self.func(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\preprocess_multi.py", line 682, in build_nlp_dataframes
+    pp_df = self.preprocess_df(df)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\preprocess_multi.py", line 477, in preprocess_df
+    preprocessed = pool.map(map_preprocess, documents, chunksize=self.chunksize)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\multiprocessing\pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\multiprocessing\pool.py", line 774, in get
+    raise self._value
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\multiprocessing\pool.py", line 48, in mapstar
+    return list(map(*args))
+      ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\preprocess_multi.py", line 386, in map_preprocess
+    doc = word_mapper(doc)
+      ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\mapping.py", line 300, in word_mapper
+    result = re.sub(pattern, lambda match: WORD_MAP[match.group(0).lower()], text)
+      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 185, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+      ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\nlp\mapping.py", line 300, in <lambda>
+    result = re.sub(pattern, lambda match: WORD_MAP[match.group(0).lower()], text)
+      ^^^^^^^^^^^^^^^^^
+KeyError: 'supreme court of the united states'
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-27 16:20:58.233217
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 320, in <module>
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-27 16:20:58.258714
+QProcess Exception:
+    prawClient.start_client()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 77, in start_client
+    self.main()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 116, in main
+    main_menu = self.select_subreddit(subreddit_list)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 176, in select_subreddit
+    self.download_comments(subreddit, offset_timestamp) # Pass the subreddit and offset timestamp
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\reddit_client.py", line 258, in download_comments
+    submission.comments.replace_more(limit=100)
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\util\deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\comment_forest.py", line 195, in replace_more
+    self._insert_comment(comment)
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\praw\models\comment_forest.py", line 80, in _insert_comment
+    raise DuplicateReplaceException
+praw.exceptions.DuplicateReplaceException: A duplicate comment has been detected. Are you attempting to call 'replace_more_comments' more than once?
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 09:50:54.460180
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 286, in <module>
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 09:50:54.481687
+QProcess Exception:
+    tgClient.start_client()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 69, in start_client
+    self.client.loop.run_until_complete(self.main())
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 153, in main
+    await self.download_messages(channel_id, offset_datetime) # Pass the channel ID and offset date
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 248, in download_messages
+    await self.save_data(message_list, source, offset_datetime)
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 272, in save_data
+    df.to_csv(file_name, index=False, encoding='utf-8-sig')
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\generic.py", line 3964, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\data\raw\[TG] \CIG'
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 10:00:32.817592
+QProcess Exception:
+Traceback (most recent call last):
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 287, in <module>
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 10:00:32.837863
+QProcess Exception:
+    tgClient.start_client()
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 69, in start_client
+    self.client.loop.run_until_complete(self.main())
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 153, in main
+    await self.download_messages(channel_id, offset_datetime) # Pass the channel ID and offset date
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 248, in download_messages
+    await self.save_data(message_list, source, offset_datetime)
+  File "C:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\scrapers\telegram_client.py", line 273, in save_data
+    df.to_csv(file_name, index=False, encoding='utf-8-sig')
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\generic.py", line 3964, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\Tom\\Desktop\\VS Code Projects\\Python Projects\\SMNLP\\data\\raw\\[TG] CIG Telegram | Counter Intelligence Global (06-28-24 to 03-30-24).csv'
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 16:53:26.264707
+Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dataframe_viewer.py", line 189, in search_dataframe
+    self.pandasModel.searchData(selected_column, operator, query)
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\utils.py", line 256, in searchData
+    search_idxs = self._data[self._data[column].str.contains(query, case=False, na=False)].index
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\strings\accessor.py", line 137, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\strings\accessor.py", line 1327, in contains
+    if regex and re.compile(pat).groups:
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 227, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 989, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 464, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 691, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 16:53:40.653053
+Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dataframe_viewer.py", line 189, in search_dataframe
+    self.pandasModel.searchData(selected_column, operator, query)
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\utils.py", line 256, in searchData
+    search_idxs = self._data[self._data[column].str.contains(query, case=False, na=False)].index
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\strings\accessor.py", line 137, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\strings\accessor.py", line 1327, in contains
+    if regex and re.compile(pat).groups:
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 227, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 989, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 464, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 691, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+
+-------------------------------------------------------------------------------------------------
+Timestamp: 2024-06-28 16:55:07.777600
+Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\dataframe_viewer.py", line 189, in search_dataframe
+    self.pandasModel.searchData(selected_column, operator, query)
+  File "c:\Users\Tom\Desktop\VS Code Projects\Python Projects\SMNLP\gui\utils.py", line 256, in searchData
+    search_idxs = self._data[self._data[column].str.contains(query, case=False, na=False)].index
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\strings\accessor.py", line 137, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\site-packages\pandas\core\strings\accessor.py", line 1327, in contains
+    if regex and re.compile(pat).groups:
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 227, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 989, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 464, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tom\miniconda3\envs\nlpenv\Lib\re\_parser.py", line 691, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+
+-------------------------------------------------------------------------------------------------

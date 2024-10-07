@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>850</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Chat Bot</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons8-chat-bot.png</normaloff>icons8-chat-bot.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(60, 60, 60);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_6">
+    <item row="0" column="0">
+     <widget class="QFrame" name="buttonFrame">
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    background-color: rgb(100, 100, 95);
+    border-radius: 5px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::WinPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0" colspan="2">
+        <widget class="QComboBox" name="modelBox">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;Select the type of GPT model to use&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border-radius: 5px;
+    padding: 2px 10px;
+    min-width: 6em;
+	background-color: rgb(70, 70, 70);
+	border: 2px outset rgb(50, 50, 50); 
+}
+QComboBox:hover {
+	background-color: rgb(80, 80, 80); 
+	border: 2px outset rgb(60, 60, 60); 
+}
+QComboBox::drop-down:on {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+	border-left-width: 1px;
+    border-left-color: rgb(50, 50, 50);
+    border-left-style: solid; 
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+    border-radius: 5px;
+    selection-background-color: rgb(80, 80, 80);
+    background-color: rgb(70, 70, 70); 
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>GPT Ultra Chat</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" colspan="2">
+        <widget class="QPushButton" name="loadButton">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: white; 
+	font-weight: bold;
+	font-size: 11pt;
+	background-color: rgb(70, 70, 70); 
+	border: 2px outset rgb(50, 50, 50); 
+	border-radius: 5px; 
+	padding: 2px;
+}
+QPushButton:hover {
+	background-color: rgb(80, 80, 80); 
+	border: 2px outset rgb(60, 60, 60); 
+}
+QPushButton:pressed {
+	color: rgb(170, 255, 0); 
+	background-color: rgb(80, 80, 80); 
+	border: 2px inset rgb(60, 60, 60); 
+}</string>
+         </property>
+         <property name="text">
+          <string>Load Model</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons8-enter.png</normaloff>icons8-enter.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4" rowspan="3">
+        <widget class="QGroupBox" name="genGroup">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	background-color: rgb(100,100,95);	
+	border: 2px solid rgb(200,200,200); 
+	border-radius: 5px; 
+	margin-top: 3ex; 
+	padding: 2px;
+}
+QGroupBox::title {
+	subcontrol-origin: margin;
+	subcontrol-position: top center; 
+	padding: 0 1px; 
+	color: rgb(170, 255, 0);
+}</string>
+         </property>
+         <property name="title">
+          <string>Generation</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label1">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 170, 0);</string>
+            </property>
+            <property name="text">
+             <string>Time: </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="timeLabel">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label2">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 170, 0);</string>
+            </property>
+            <property name="text">
+             <string># Words: </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="wordsLabel">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label3">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 170, 0);</string>
+            </property>
+            <property name="text">
+             <string>Similarity: </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="scoreLabel">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="tempBox">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;Apply temperature - lower percentage value reduces randomness&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border-radius: 5px;
+    padding: 2px 10px;
+    min-width: 6em;
+	background-color: rgb(70, 70, 70);
+	border: 2px outset rgb(50, 50, 50); 
+}
+QComboBox:hover {
+	background-color: rgb(80, 80, 80); 
+	border: 2px outset rgb(60, 60, 60); 
+}
+QComboBox::drop-down:on {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+	border-left-width: 1px;
+    border-left-color: rgb(50, 50, 50);
+    border-left-style: solid; 
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+    border-radius: 5px;
+    selection-background-color: rgb(80, 80, 80);
+    background-color: rgb(70, 70, 70); 
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="topkBox">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;Generate the next word based on a limited sample of top words&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border-radius: 5px;
+    padding: 2px 10px;
+    min-width: 6em;
+	background-color: rgb(70, 70, 70);
+	border: 2px outset rgb(50, 50, 50); 
+}
+QComboBox:hover {
+	background-color: rgb(80, 80, 80); 
+	border: 2px outset rgb(60, 60, 60); 
+}
+QComboBox::drop-down:on {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+	border-left-width: 1px;
+    border-left-color: rgb(50, 50, 50);
+    border-left-style: solid; 
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+    border-radius: 5px;
+    selection-background-color: rgb(80, 80, 80);
+    background-color: rgb(70, 70, 70); 
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Top K</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QComboBox" name="toppBox">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;Generate the next word from a culmulative sampling based on a percentage&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border-radius: 5px;
+    padding: 2px 10px;
+    min-width: 6em;
+	background-color: rgb(70, 70, 70);
+	border: 2px outset rgb(50, 50, 50); 
+}
+QComboBox:hover {
+	background-color: rgb(80, 80, 80); 
+	border: 2px outset rgb(60, 60, 60); 
+}
+QComboBox::drop-down:on {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+	border-left-width: 1px;
+    border-left-color: rgb(50, 50, 50);
+    border-left-style: solid; 
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+    border-radius: 5px;
+    selection-background-color: rgb(80, 80, 80);
+    background-color: rgb(70, 70, 70); 
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Top P</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QCheckBox" name="tagCheck">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;This will color named entities by type in the generated response.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;Blue = People, Green = Location, Purple = Organization&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff00;&quot;&gt;Red = Global Political Entity, Cyan = Time, Yellow = Misc.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 255, 0);
+background-color: rgb(100, 100, 95);</string>
+         </property>
+         <property name="text">
+          <string>  Tag Entities</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QGroupBox" name="inputGroup">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	background-color: rgb(100,100,95);
+	border: 2px solid rgb(200,200,200); 
+	border-radius: 5px; 
+	margin-top: 3ex; 
+	padding: 2px;
+}
+QGroupBox::title {
+	subcontrol-origin: margin;
+	subcontrol-position: top center; 
+	padding: 0 1px; 
+	color: rgb(170, 255, 0);
+}</string>
+         </property>
+         <property name="title">
+          <string>Prompt Sentiment</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="promptLabel">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Plain</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="2" colspan="2">
+        <widget class="QGroupBox" name="outputGroup">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	background-color: rgb(100,100,95);
+	border: 2px solid rgb(200,200,200); 
+	border-radius: 5px; 
+	margin-top: 3ex; 
+	padding: 2px;
+}
+QGroupBox::title {
+	subcontrol-origin: margin;
+	subcontrol-position: top center; 
+	padding: 0 1px; 
+	color: rgb(170, 255, 0);
+}</string>
+         </property>
+         <property name="title">
+          <string>Response Sentiment</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="respLabel">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QFrame" name="consoleFrame">
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    background-color: rgb(100, 100, 95);
+    border-radius: 5px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::WinPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0" colspan="2">
+        <widget class="QTextBrowser" name="console">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTextBrowser {
+	background-color: rgb(40, 40, 40); 
+	color: rgb(255, 255, 255); 
+	border: 2px inset rgb(80, 80, 80);
+	border-radius: 5px;  
+	padding: 2px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTextEdit" name="textBox">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+	background-color: rgb(40, 40, 40); 
+	color: rgb(255, 255, 255); 
+	border: 2px inset rgb(80, 80, 80);
+	border-radius: 5px;  
+	padding: 2px;
+}
+QTextEdit:hover {
+	border: 2px inset rgb(170, 255, 0); 
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Ask the chatbot a question and hit 'enter'</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="clearButton">
+         <property name="minimumSize">
+          <size>
+           <width>125</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: white; 
+	font-weight: bold;
+	font-size: 11pt;
+	background-color: rgb(70, 70, 70); 
+	border: 2px outset rgb(50, 50, 50); 
+	border-radius: 5px; 
+	padding: 2px;
+}
+QPushButton:hover {
+	background-color: rgb(80, 80, 80); 
+	border: 2px outset rgb(60, 60, 60); 
+}
+QPushButton:pressed {
+	color: rgb(255, 0, 0); 
+	background-color: rgb(80, 80, 80); 
+	border: 2px inset rgb(60, 60, 60); 
+}</string>
+         </property>
+         <property name="text">
+          <string> Clear</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons8-clear.png</normaloff>icons8-clear.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+	color: white;
+	font-size: 11pt;
+	font-weight: bold;
+	background-color: rgb(60, 60, 60);
+	spacing: 4px; /* spacing between menu bar items */
+}
+QMenuBar::item {
+	padding: 1px 4px;
+	background: transparent;
+	border-radius: 2px;
+}
+QMenuBar::item:selected { /* when selected using mouse or keyboard */
+	background: rgb(100, 100, 95);
+}</string>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="styleSheet">
+     <string notr="true">QMenu {
+	color: white;
+    background-color: rgb(100, 100, 95);
+    margin: 2px; /* some spacing around the menu */
+}
+QMenu::item {
+    padding: 2px 25px 2px 20px;
+    border: 1px solid transparent; /* reserve space for selection border */
+}
+QMenu::item:selected {
+    border-color: rgb(170, 255, 0);
+    background: rgba(170, 255, 0, 50);
+}</string>
+    </property>
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionLoad"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load Model</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
