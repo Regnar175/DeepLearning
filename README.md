@@ -1,4 +1,6 @@
-This repository is meant as reference for those who want to learn how to do entry level programing of large language models in Python using PyTorch.
+Learn how to build BART, BERT and GPT models from scrath using Python and Pytorch.
+
+The code in this repository is meant as reference for those who want to learn how to do entry level programing of large language models.
 
 There are many todo's that I still need to complete for this repository, but in the mean time please feel free to refernece and use the code in your projects as you see fit.
 
